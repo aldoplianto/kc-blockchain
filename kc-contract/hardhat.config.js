@@ -2,7 +2,7 @@ require("@nomicfoundation/hardhat-toolbox");
 require("@nomicfoundation/hardhat-verify");
 require("dotenv").config();
 
-const { PRIVATE_KEY, SEPOLIA_RPC_URL } = process.env;
+const { PRIVATE_KEY, SEPOLIA_RPC_URL, SEPOLIA_API_KEY } = process.env;
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
@@ -17,6 +17,6 @@ module.exports = {
     enabled: true
   },
   etherscan: {
-    apiKey: "JMPJC3FY5ZUM7S7URSJH43CZJX3PJTPXSD"
+    apiKey: SEPOLIA_API_KEY
   }
 };
